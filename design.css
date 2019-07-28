@@ -591,10 +591,24 @@ body div.line.selectedUser[data-highlight=false] {
   	background-color: #BDEFBC !important;
 }
 
-body div.line.selectedUser[data-highlight=false] .sender:before{
+body div.line.selectedUser .sender:before{
 	content: "★ ";
 	color: #3E8040;
 }
+
+body div.line.selectedUser[data-highlight=true]{
+	transition-property: border-top, border-bottom, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s;
+  	z-index: 190;
+  	position: relative;
+  	background: rgb(255,255,204);
+	background: linear-gradient(90deg, rgba(255,255,204,1) 0%, rgba(189,239,188,1) 70%);
+}
+
+body div.line.selectedUser span.sender{
+	background-color: #BDEFBC !important;
+}
+
 
 
 body div.line.coalesced.selectedUser[data-highlight=false] .sender:before{
